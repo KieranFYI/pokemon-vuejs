@@ -13,7 +13,7 @@ Vue.prototype.$lodash = Lodash;
 
 Vue.prototype.$axios = AxiosAlias.create({
     withCredentials: true,
-    baseURL: Vue.config.devtools ? '//127.0.0.1/api/' : '//api-pokemon.kieran.fyi/api/'
+    baseURL: Vue.config.devtools ? '//127.0.0.1/' : '//api-pokemon.kieran.fyi/'
 });
 Vue.prototype.$axios.interceptors.request.use(function (config) {
     let userStore = useUserStore();

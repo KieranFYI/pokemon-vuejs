@@ -17,7 +17,7 @@ export const useUserStore = defineStore('user', {
             let $this = this;
             Vue.prototype.$axios
                 .create()
-                .get('user', {headers: {Authorization: 'Bearer ' + token}})
+                .get('api/user', {headers: {Authorization: 'Bearer ' + token}})
                 .catch(() => {
                     $this.loggedIn = false;
                     $this.token = null;

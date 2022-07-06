@@ -36,7 +36,7 @@ export default {
 
             $this.loading = true;
             $this.$axios
-                .post('auth/token')
+                .post('api/auth/token')
                 .then((response) => {
                     if (response.data.success === true) {
                         $this.token = response.data.data.token;

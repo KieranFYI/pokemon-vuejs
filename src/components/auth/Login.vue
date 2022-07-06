@@ -147,7 +147,7 @@ export default {
             $this.loading = true;
             $this.$axios.get('sanctum/csrf-cookie')
                 .then(() => {
-                    this.$axios.post('auth/login', $this.login.fields)
+                    this.$axios.post('api/auth/login', $this.login.fields)
                         .catch((error) => {
                             if (!error.response) {
                                 return;
@@ -176,7 +176,7 @@ export default {
             $this.loading = true;
             $this.$axios.get('sanctum/csrf-cookie')
                 .then(() => {
-                    this.$axios.post('auth/register', $this.registration.fields)
+                    this.$axios.post('api/auth/register', $this.registration.fields)
                         .catch((error) => {
                             if (!error.response) {
                                 return;

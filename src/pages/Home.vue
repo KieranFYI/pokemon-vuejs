@@ -181,13 +181,13 @@ export default {
     beforeMount() {
         let $this = this;
 
-        $this.$axios.get('pokemon/type')
+        $this.$axios.get('api/pokemon/type')
             .then((response) => {
                 if (response.data.success === true) {
                     $this.types = response.data.data;
                 }
             });
-        $this.$axios.get('pokemon/filters')
+        $this.$axios.get('api/pokemon/filters')
             .then((response) => {
                 if (response.data.success === true) {
                     $this.filters = response.data.data;
@@ -210,7 +210,7 @@ export default {
         $this.fetchData = $this.$lodash.debounce(() => {
             $this.loading = true;
 
-            $this.$axios.get('pokemon', {params: $this.options})
+            $this.$axios.get('api/pokemon', {params: $this.options})
                 .then((response) => {
                     if (response.data.success === true) {
                         $this.pokemon = response.data.data;

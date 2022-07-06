@@ -98,7 +98,7 @@ export default {
             let $this = this;
             $this.reset();
             $this.loading = true;
-            $this.$axios.post('imports/pokemon', $this.fields,
+            $this.$axios.post('api/imports/pokemon', $this.fields,
                 {
                     headers: {
                         'Content-Type': 'multipart/form-data'
@@ -130,7 +130,7 @@ export default {
         },
         fetchData() {
             let $this = this;
-            $this.$axios.get('imports/pokemon')
+            $this.$axios.get('api/imports/pokemon')
                 .then((response) => {
                     if (response.data.success === true) {
                         $this.imports = response.data.data.imports;
