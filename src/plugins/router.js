@@ -20,5 +20,10 @@ export default new VueRouter({
             path: '/',
             component: () => import('@/pages/Home.vue')
         },
+        {
+            name: 'import',
+            path: '/import',
+            component: () => import('@/pages/Import.vue')
+        },
     ]
 });

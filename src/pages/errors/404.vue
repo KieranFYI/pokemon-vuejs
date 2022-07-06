@@ -1,5 +1,5 @@
 <template>
-  <v-row class="align-center justify-center" id="error">
+  <v-row align="center" justify="center" id="error">
     <v-col cols="10" sm="8" md="4">
       <v-card>
         <v-card-title class="red darken-3 white--text subheading" primary-title>

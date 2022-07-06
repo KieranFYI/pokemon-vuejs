@@ -11,12 +11,19 @@
         <v-divider></v-divider>
 
         <v-list dense nav>
-            <v-list-item :to="{ name: 'home' }">
+            <v-list-item :to="{ name: 'home' }" exact>
                 <v-list-item-icon>
                     <v-icon>mdi-home</v-icon>
                 </v-list-item-icon>
 
                 <v-list-item-title>Home</v-list-item-title>
+            </v-list-item>
+            <v-list-item :to="{ name: 'import' }">
+                <v-list-item-icon>
+                    <v-icon>mdi-import</v-icon>
+                </v-list-item-icon>
+
+                <v-list-item-title>Import Dataset</v-list-item-title>
             </v-list-item>
         </v-list>
 

@@ -7,8 +7,9 @@ import { createPinia, PiniaVuePlugin } from 'pinia'
 import piniaPluginPersistedstate from 'pinia-plugin-persistedstate'
 import VueCompositionAPI from '@vue/composition-api'
 import { useUserStore } from "@/store/user";
+import Lodash from 'lodash';
 
-
+Vue.prototype.$lodash = Lodash;
 
 Vue.prototype.$axios = AxiosAlias.create({
     withCredentials: true,

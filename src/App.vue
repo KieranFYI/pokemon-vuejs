@@ -1,8 +1,8 @@
 <template>
     <v-app dark>
-        <div v-if="userStore.loggedIn">
+        <div v-if="userStore.loggedIn" class="fill-height">
             <navigation transition="scroll-x-transition"></navigation>
-            <v-main>
+            <v-main class="fill-height">
                 <v-container class="fill-height" fluid transition="scroll-y-transition" align-start>
                     <router-view></router-view>
                 </v-container>

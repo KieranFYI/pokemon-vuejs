@@ -1,5 +1,5 @@
 <template>
-    <v-row class="align-center justify-center">
+    <v-row align="center" justify="center">
         <v-col cols="10" sm="8" md="4">
             <v-progress-linear :indeterminate="true" v-if="userStore.loading"></v-progress-linear>
             <v-card v-else-if="!displayRegistration">
@@ -145,7 +145,7 @@ export default {
             let userStore = useUserStore();
             $this.resetErrors();
             $this.loading = true;
-            $this.$axios.get('/sanctum/csrf-cookie')
+            $this.$axios.get('sanctum/csrf-cookie')
                 .then(() => {
                     this.$axios.post('auth/login', $this.login.fields)
                         .catch((error) => {
@@ -166,6 +166,7 @@ export default {
                             }
                         })
                         .finally(() => {
+                            $this.loading = false;
                         });
                 });
         },
@@ -173,7 +174,7 @@ export default {
             let $this = this;
             this.resetErrors();
             $this.loading = true;
-            $this.$axios.get('/sanctum/csrf-cookie')
+            $this.$axios.get('sanctum/csrf-cookie')
                 .then(() => {
                     this.$axios.post('auth/register', $this.registration.fields)
                         .catch((error) => {
