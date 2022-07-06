@@ -21,6 +21,11 @@ export default new VueRouter({
             component: () => import('@/pages/Home.vue')
         },
         {
+            name: 'user',
+            path: '/user',
+            component: () => import('@/pages/User.vue')
+        },
+        {
             name: 'import',
             path: '/import',
             component: () => import('@/pages/Import.vue')
