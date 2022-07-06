@@ -33,7 +33,7 @@ Vue.config.productionTip = false;
 
 router.beforeEach((to, from, next) => {
     if (to.meta.title !== undefined) {
-        document.title = to.meta.title + '| Pokemon';
+        document.title = to.meta.title + ' | Pokemon';
     } else {
         document.title = 'Pokemon';
     }
